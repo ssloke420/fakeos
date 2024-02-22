@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Windows OS Simulator</title>
+    <title>Shlek OS</title>
     <script>
       function google() {
        window.open("https://www.google.com", "_blank");
@@ -9,6 +9,8 @@
       function canvas() {
        window.open("https://hcpss.instructure.com/", "_blank");
       }
+      var d = new Date();
+      document.getElementById("date").textContent = d;
     </script>
     <style>
       body {
@@ -23,13 +25,14 @@
         margin-left:1px;
         border: 2px solid orange;
       }
-      .app {
-        background-color: orange;
+      #date {
+        text-align: right;
       }
     </style>
   </head>
   <body>
   <button onclick="google()"><img src="chrome.png"/></button>
   <button onclick="canvas()"><img src="canvas.jpeg"/></button>
+  <h4> <span id="date"></span>.<h4/>
   </body>
 </html>
