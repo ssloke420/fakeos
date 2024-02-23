@@ -15,6 +15,26 @@
       function drive() {
        window.open("https://drive.google.com/drive/home", "_blank");
       }
+      const container = document.getElementById('iframeContainer');
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        container.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - container.getBoundingClientRect().left;
+            offsetY = e.clientY - container.getBoundingClientRect().top;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                container.style.left = e.clientX - offsetX + 'px';
+                container.style.top = e.clientY - offsetY + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
     </script>
     <style>
       body {
@@ -43,6 +63,8 @@
   <button onclick="deltaMath()"><img src="dm.jpeg"/></button>
   <button onclick="drive()"><img src="drive.png"/></button>
   <input type="text">
+  <div id="iframeContainer">
   <iframe src="https://copilot.microsoft.com/" title="Copilot" height=500px></iframe>
+  </div>
   </body>
 </html>
