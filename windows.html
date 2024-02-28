@@ -4,8 +4,8 @@
     <title>Shlek OS</title>
     <script>
       var d = new Date()
-      function google() {
-       window.open("https://www.google.com", "_blank");
+      function bing() {
+       window.open("https://www.bing.com", "_blank");
       }
       function canvas() {
        window.open("https://hcpss.instructure.com/", "_blank");
@@ -19,26 +19,7 @@
       function date() {
         alert(d);
       }
-      const container = document.getElementById('iframeContainer');
-        let isDragging = false;
-        let offsetX, offsetY;
-
-        container.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            offsetX = e.clientX - container.getBoundingClientRect().left;
-            offsetY = e.clientY - container.getBoundingClientRect().top;
-        });
-
-        document.addEventListener('mousemove', (e) => {
-            if (isDragging) {
-                container.style.left = e.clientX - offsetX + 'px';
-                container.style.top = e.clientY - offsetY + 'px';
-            }
-        });
-
-        document.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
+      
     </script>
     <style>
       body {
@@ -59,7 +40,7 @@
     </style>
   </head>
   <body>
-    <button onclick="google()"><img src="chrome.png"/></button>
+    <button onclick="bing()"><img src="bing.png"/></button>
     <button onclick="canvas()"><img src="canvas.jpeg"/></button>
     <button onclick="deltaMath()"><img src="dm.jpeg"/></button>
     <button onclick="drive()"><img src="drive.png"/></button>
@@ -67,7 +48,6 @@
   <input type="text">
   <div id="iframeContainer">
   <iframe src="https://copilot.microsoft.com/" title="Copilot" height=500px></iframe>
-  <iframe src="https://www.bing.com/" title=search height=500px width=650px></iframe>
   </div>
   </body>
 </html>
