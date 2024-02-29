@@ -5,14 +5,7 @@
     <script>
       var d = new Date()
       function bing() {
-        var bingvisibility = document.getElementById("bing");
-        if (bingvisibility.style.display === "none") {
-          bingvisibility.style.display = "block";
-        }
-        else{
-          bingvisibility.style.display = "none")
-        }
-          
+        window.open("https://www.bing.com/", "_blank");
       }
       function canvas() {
        window.open("https://hcpss.instructure.com/", "_blank");
@@ -47,7 +40,7 @@
       #iframeContainer {
         width: 700px;
         height: 500px;
-        display: none;
+        display: inline;
         position: fixed;
         top: 0px;
         left: 0px;
@@ -67,7 +60,7 @@
   <iframe src="https://copilot.microsoft.com/" title="Copilot" height=500px></iframe>
   </div>
   <div id="iframeContainer">
-  <iframe src="https://bing.com/" id="bing"></iframe>
+  <iframe src="https://www.bing.com/" id="bing"></iframe>
   </div>
   </body>
 </html>
