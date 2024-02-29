@@ -5,7 +5,7 @@
     <script>
       var d = new Date()
       function bing() {
-       window.open("https://www.bing.com", "_blank");
+       document.getElementById("bing").style.display = "block";
       }
       function canvas() {
        window.open("https://hcpss.instructure.com/", "_blank");
@@ -37,6 +37,11 @@
         padding: 1px;
         border: 4px dashed black;
       }
+      iframe {
+        width: 700px;
+        height: 500px;
+        visible: none;
+      }
     </style>
   </head>
   <body>
@@ -48,6 +53,7 @@
   <input type="text">
   <div id="iframeContainer">
   <iframe src="https://copilot.microsoft.com/" title="Copilot" height=500px></iframe>
+  <iframe src="https://bing.com/" id="bing"></iframe>
   </div>
   </body>
 </html>
