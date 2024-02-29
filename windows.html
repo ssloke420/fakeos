@@ -5,7 +5,14 @@
     <script>
       var d = new Date()
       function bing() {
-       document.getElementById("bing").style.display = "block";
+        var bingvisibility = document.getElementById("bing");
+        if (bingvisibility.style.display === "none") {
+          bingvisibility.style.display = "block";
+        }
+        else{
+          bingvisibility.style.display = "none")
+        }
+          
       }
       function canvas() {
        window.open("https://hcpss.instructure.com/", "_blank");
